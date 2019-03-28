@@ -20,6 +20,7 @@
   "author": "archie isdiningrat",
   "license": "ISC",
   "dependencies": {
+    "@google/maps": "^0.5.5",
     "firebase-admin": "^7.1.1",
     "ioredis": "^4.6.2",
     "mongoose": "^5.4.19",
