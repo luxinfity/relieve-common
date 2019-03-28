@@ -1,7 +1,7 @@
 {
-  "name": "node-common",
+  "name": "relieve-common",
   "version": "1.0.0",
-  "description": "common modules for nodejs apps",
+  "description": "common modules for relieve microservices",
   "main": "index.js",
   "scripts": {
     "clean-install": "rm -rf node_modules package-lock.json && npm install --save",
