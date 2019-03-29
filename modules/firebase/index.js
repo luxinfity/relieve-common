@@ -5,7 +5,10 @@ const admin = require('firebase-admin');
 let instance;
 
 exports.initialize = (config) => {
-    instance = admin.initializeApp(config);
+    instance = admin.initializeApp({
+        ...config,
+        credential: admin.credential.cert(config.credential)
+    });
 };
 
 exports.getInstance = () => {
