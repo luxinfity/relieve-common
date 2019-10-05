@@ -7,16 +7,17 @@ let instance;
 
 exports.initialize = (config) => {
     let credential;
+    const conf = {
+        databaseURL: config.databaseURL
+    };
 
     if (config.credentialPath) {
         const dir = path.join(__dirname, '../../../..', config.credentialPath);
         credential = require(dir);
+        conf.credential = admin.credential.cert(credential);
     }
 
-    instance = admin.initializeApp({
-        databaseURL: config.databaseURL,
-        credential: credential ? admin.credential.cert(credential) : undefined
-    });
+    instance = admin.initializeApp(conf);
 };
 
 exports.getInstance = () => {
