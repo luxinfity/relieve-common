@@ -35,7 +35,7 @@ exports.registerListeners = (DIR) => {
 
 exports.initialize = ({ path: pathName }) => {
     instance = new events.EventEmitter();
-    exports.registerListeners(path.join(__dirname, '../../../../', pathName));
+    exports.registerListeners(path.join(__dirname, pathName));
 };
 
 exports.getInstance = () => {
