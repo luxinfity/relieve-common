@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const admin = require('firebase-admin');
 
 let instance;
@@ -8,7 +9,8 @@ exports.initialize = (config) => {
     let credential;
 
     if (config.credentialPath) {
-        credential = require(config.credentialPath);
+        const dir = path.join(__dirname, '../../../..', config.credentialPath);
+        credential = require(dir);
     }
 
     instance = admin.initializeApp({
