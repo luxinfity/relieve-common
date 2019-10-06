@@ -13,8 +13,8 @@ exports.initialize = ({ config, path: pathName }) => {
 
     Mongoose.Promise = global.Promise;
     Mongoose.connect(config.connection_string, config.options);
-
-    const modelsDir = path.join(__dirname, '../../../..', pathName);
+    // __dirname,
+    const modelsDir = path.join('../../../..', pathName);
     fs.readdirSync(modelsDir)
         .filter(file => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
         .forEach((file) => {

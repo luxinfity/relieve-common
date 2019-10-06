@@ -12,7 +12,8 @@ exports.initialize = (config) => {
     };
 
     if (config.credentialPath) {
-        const dir = path.join(__dirname, '../../../..', config.credentialPath);
+        // __dirname,
+        const dir = path.join('../../../..', config.credentialPath);
         credential = require(dir);
         conf.credential = admin.credential.cert(credential);
     }
