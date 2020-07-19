@@ -23,7 +23,7 @@
         "@google/maps": "^0.5.5",
         "firebase-admin": "^7.1.1",
         "ioredis": "^4.6.2",
-        "mongoose": "^5.4.19",
+        "mongoose": "^5.7.5",
         "sequelize": "^5.15.1"
     }
 }
